@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+@import "./base/variables";
+@import "./base/reset";
+
+body {
+   font-family: $ff;
+
+   font-size: $fs-rg;
+   text-align: left;
+   background-color: $txt-light-gray;
+}
+
+.container {
+   outline: 1px solid red;
+   padding: 4rem 2rem;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto auto auto;
+   gap: 0px 0px;
+   grid-template-areas:
+      "community"
+      "sub"
+      "about";
+
+   color: $txt-light-gray;
+
+   h3 {
+      font-size: $fs-md;
+      margin-bottom: 1rem;
+   }
+
+   .community {
+      grid-area: community;
+      background-color: #fff;
+      border-radius: 8px 8px 0 0;
+
+      // outline: 1px solid red;
+
+      h3 {
+         color: #4abebd;
+      }
+
+      & p:nth-child(2) {
+         // outline: 1px solid red;
+      }
+
+      & p:first-of-type {
+         color: $pr-yellow;
+      }
+
+      & p:last-child {
+         margin-top: 1rem;
+         color: $bt-gray;
+         font-size: $fs-sm;
+         line-height: 1.5rem;
+      }
+
+      // &:p(:first-child) {
+      //    color: $pr-yellow;
+      // }
+
+      // p &:last-child {
+      //    color: $txt-light-gray;
+      // }
+   }
+   .sub {
+      grid-area: sub;
+      background-color: $pr-cyan;
+      // outline: 1px solid green;
+
+      & p:first-of-type {
+         font-size: 1.2rem;
+         font-weight: 400;
+
+         span {
+            font-size: 2rem;
+         }
+      }
+
+      button {
+         margin-top: 1.5rem;
+
+         width: 100%;
+         background-color: $pr-yellow;
+         border: none;
+         padding: 10px;
+         border-radius: 8px;
+         color: #fff;
+         box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.28);
+
+         &:hover {
+            cursor: pointer;
+         }
+      }
+   }
+   .about {
+      grid-area: about;
+      background-color: #4abebd;
+      border-radius: 0 0 8px 8px;
+      // outline: 1px solid blue;
+
+      ul {
+         // outline: 1px solid red;
+         width: 80%;
+         list-style: none;
+         font-size: 0.95rem;
+         opacity: 0.8;
+      }
+   }
+
+   .block {
+      padding: 1.5rem;
+   }
+}
